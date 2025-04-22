@@ -9,8 +9,8 @@
     "^@fontsource/(.*)$",
     "^react$",
     "^[a-zA-Z]",
-    "^~/*(.*)$",
-    "~?\\w",
+    "^@/*(.*)$",
+    "@?\\w",
     "^[./]"
   ],
   "importOrderSeparation": true,
