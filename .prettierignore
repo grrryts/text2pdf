@@ -1,0 +1,15 @@
+.next
+node_modules
+dist
+coverage
+build
+
+.cache
+
+package-lock.json
+yarn.lock
+
+.vscode
+.idea
+
+public/*
