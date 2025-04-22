@@ -40,7 +40,7 @@ export const convertApi = createApi({
 
           localStorage.setItem(
             localStorageKeys.convertedPdfList,
-            JSON.stringify(convertedPdfList),
+            JSON.stringify([...convertedPdfList, value]),
           );
         });
       },
