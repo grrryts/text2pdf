@@ -21,12 +21,10 @@ describe('InputGroup Component', () => {
 
   it('renders textarea and button', () => {
     setup();
-    expect(
-      screen.getByPlaceholderText('Enter text 2 convert'),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('button', { name: /convert 2 pdf/i }),
-    ).toBeInTheDocument();
+    const textarea = screen.getByPlaceholderText('Enter text 2 convert');
+    const button = screen.getByRole('button', { name: /convert 2 pdf/i });
+    expect(textarea).toBeInTheDocument();
+    expect(button).toBeInTheDocument();
   });
 
   it('calls onChangeInputValue when text is entered', () => {
@@ -46,7 +44,7 @@ describe('InputGroup Component', () => {
   it('disables textarea and button when isSubmitting is true', () => {
     setup(true);
     const textarea = screen.getByPlaceholderText('Enter text 2 convert');
-    const button = screen.getByRole('button', { name: /convert 2 pdf/i });
+    const button = screen.getByTestId('convert-button');
     expect(textarea).toHaveAttribute('readOnly');
     expect(button).toBeDisabled();
   });

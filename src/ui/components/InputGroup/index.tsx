@@ -23,6 +23,7 @@ const InputGroup = ({
       />
 
       <button
+        data-testid="convert-button"
         className="p-2 border border-gray-300 rounded-md cursor-pointer w-full min-h-[42px] flex items-center justify-center"
         onClick={() => onSubmit(inputValue)}
         disabled={!inputValue || isSubmitting}
