@@ -45,6 +45,7 @@ describe('HomeView Component', () => {
       fireEvent.change(screen.getByRole('textbox'), {
         target: { value: 'Sample text' },
       });
+
       fireEvent.click(screen.getByTestId('convert-button'));
     });
 
